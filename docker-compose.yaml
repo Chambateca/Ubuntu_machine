@@ -1,0 +1,12 @@
+version: "3"
+services:
+  ubuntu:
+    # env_file: .env
+    build: .
+    image: ubuntu:lab
+    volumes:
+      - ./workdir:/root/workdir
+    # environment:
+      # TEST: "${TEST}"
+    stdin_open: true # docker run -i
+    tty: true        # docker run -t
